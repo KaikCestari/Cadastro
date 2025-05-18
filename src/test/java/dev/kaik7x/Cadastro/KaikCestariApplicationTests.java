@@ -1,0 +1,13 @@
+package dev.kaik7x.Cadastro;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class KaikCestariApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
