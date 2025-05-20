@@ -1,18 +1,34 @@
-package dev.kaik7x.Cadastro;
+package dev.kaik7x.Cadastro.Usuarios;
 
 
+import dev.kaik7x.Cadastro.MissaoFilme.MissoesModel;
 import jakarta.persistence.*;
+import org.hibernate.mapping.List;
 
 @Entity
 @Table(name = "tb_cadastro")
-public class UsuarioModel {
+public class UsuarioModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
     private String nome;
     private String email;
     private int idade;
+    private int senha;
+
     public UsuarioModel() {
+    }
+
+    public UsuarioModel(int senha) {
+        this.senha = senha;
+    }
+
+    public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
     }
 
     public UsuarioModel(String nome, int idade, String email) {
